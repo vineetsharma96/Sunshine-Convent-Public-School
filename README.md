@@ -90,3 +90,7 @@ The active pages have been browser-checked at 320px, 390px, 923px, and 1440px co
 Serve the repository root with any static host supporting HTML, CSS, JavaScript, and images. Keep `Logo/` and `vendor/` paths intact. No deployment is configured and no API keys are required.
 
 Fonts load from Google Fonts with local fallbacks. GSAP and ScrollTrigger are served locally. Applicable third-party notices are in `vendor/COMPONENT-NOTICES.txt`, `vendor/GSAP-README.md`, `components/VENGEANCE-LICENSE`, and retained source headers. See the [GSAP terms](https://gsap.com/standard-license).
+
+## License
+
+Original project code is licensed under the [MIT License](LICENSE), copyright (c) 2026 Vineet Sharma. Third-party libraries and components retain their respective licenses. School branding, logos, photographs, and linked school documents are excluded from this code license.
