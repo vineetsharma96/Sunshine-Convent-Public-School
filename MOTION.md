@@ -12,7 +12,7 @@ The HTML pages use local GSAP 3.15.0 and ScrollTrigger with `motion.js`, `motion
 - Bobbing letters, a rotating star, and a floating arrow on learning cards.
 - FAQ answers, navigation links, gallery-filter transitions, and the admissions process path.
 
-Observed ambient effects pause outside the viewport. Pointer movement is limited to fine pointing devices. Visitors can pause motion or explicitly enable it for this site; the preference is saved locally. System reduced motion is respected by default, and text remains readable when motion is off.
+Observed ambient effects pause outside the viewport. Pointer movement is limited to fine pointing devices. Motion starts automatically on every page, including when the browser prefers reduced motion. There is no motion toggle, and legacy saved pause preferences are ignored.
 
 GSAP distribution files retain their upstream banners. See [GSAP terms](https://gsap.com/standard-license), `vendor/GSAP-README.md`, and `vendor/COMPONENT-NOTICES.txt`.
 

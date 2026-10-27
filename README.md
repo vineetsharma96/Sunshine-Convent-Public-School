@@ -28,7 +28,7 @@ Open [localhost:4173](http://localhost:4173/). Stop the server with `Ctrl+C`. No
 - Responsive navigation, keyboard focus styles, and a skip link.
 - Blue welcome lines, heading reveals, horizontal learning-text reveal, counters, and moving learning-card symbols.
 - Decorative motion in blank photo frames; no stock or generated student photographs.
-- Saved **Pause motion / Enable motion** preference. System reduced motion applies by default, with an explicit site-only opt-in.
+- Animations start automatically on every page, without a motion toggle or saved pause preference.
 - Admission enquiries prepare a WhatsApp draft for the visitor to send. There is no backend submission or stored personal information.
 - Shared school logo in the header, footer, and favicon. The original supplied logo is retained alongside its transparent-background version.
 - Larger supporting text: body copy generally starts at 14px, labels at 12px, and form controls at 16px. The brand subtitle uses a separate typography treatment.
@@ -83,7 +83,7 @@ This builds the optional bundle; it does not switch the website to React. See [M
 
 ## Validation
 
-The active pages have been browser-checked at 320px, 390px, 923px, and 1440px content widths for horizontal overflow and small supporting text. Navigation, enquiry drafts, filters, motion preferences, and the learning-text reveal have also been exercised. These checks are not a full accessibility audit or device performance benchmark.
+The active pages have been browser-checked at 320px, 390px, 923px, and 1440px content widths for horizontal overflow and small supporting text. Navigation, enquiry drafts, filters and the learning-text reveal have also been exercised. These checks are not a full accessibility audit or device performance benchmark.
 
 ## Hosting and third-party assets
 

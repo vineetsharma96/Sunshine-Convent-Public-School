@@ -22,8 +22,8 @@ if 'pages.css' not in home:
 if 'motion.js' not in home:
     home = home.replace('<script src="app.js" defer></script>', '<link rel="stylesheet" href="motion.css"><script src="vendor/gsap.min.js" defer></script><script src="vendor/ScrollTrigger.min.js" defer></script><script src="app.js" defer></script><script src="motion.js" defer></script>')
 # Version motion assets so existing preview tabs fetch the latest behaviour.
-home = re.sub(r'motion\.js(?:\?v=[^\"]*)?', 'motion.js?v=7', home)
-home = re.sub(r'motion\.css(?:\?v=[^\"]*)?', 'motion.css?v=7', home)
+home = re.sub(r'motion\.js(?:\?v=[^\"]*)?', 'motion.js?v=8', home)
+home = re.sub(r'motion\.css(?:\?v=[^\"]*)?', 'motion.css?v=8', home)
 home_path.write_text(home, encoding='utf-8')
 head = home.split('<main id="main">')[0]
 tail = home.split('</main>', 1)[1]

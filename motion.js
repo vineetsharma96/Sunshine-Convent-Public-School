@@ -7,16 +7,6 @@
   const { gsap, ScrollTrigger } = window;
   gsap.registerPlugin(ScrollTrigger);
   const root = document.documentElement;
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = false;
-  let forceMotion = false;
-  try { paused = localStorage.getItem('sunshine-motion') === 'paused'; } catch { /* Optional preference storage. */ }
-  try { forceMotion = localStorage.getItem('sunshine-motion-override') === 'enabled'; } catch { /* Explicit site-only opt-in. */ }
-  const control = document.createElement('button');
-  control.type = 'button';
-  control.className = 'motion-control';
-  document.body.append(control);
-
   // Keep the welcome treatment without reloading the rejected library layout.
   const welcome = document.querySelector('.hero');
   if (welcome) {
@@ -131,16 +121,9 @@
   let context;
   function setup() {
     context?.revert();
-    const enabled = !paused && (!reduced.matches || forceMotion);
-    root.classList.toggle('motion-enabled', enabled);
-    root.classList.toggle('motion-disabled', !enabled);
-    control.setAttribute('aria-pressed', String(enabled));
-    control.textContent = enabled ? 'Pause motion' : 'Enable motion';
-    control.title = reduced.matches && !enabled
-      ? 'Your browser prefers reduced motion. Enable animations for this website only.'
-      : enabled ? 'Pause animations on this website' : 'Enable animations on this website';
-    document.querySelectorAll('.photo-motion-shutter').forEach(element => { element.hidden = !enabled; });
-    if (!enabled) return;
+    root.classList.add('motion-enabled');
+    root.classList.remove('motion-disabled');
+    document.querySelectorAll('.photo-motion-shutter').forEach(element => { element.hidden = false; });
 
     context = gsap.context(self => {
       const cleanups = [];
@@ -271,16 +254,5 @@
     });
     document.fonts.ready.then(() => ScrollTrigger.refresh());
   }
-  control.addEventListener('click', () => {
-    paused = root.classList.contains('motion-enabled');
-    forceMotion = !paused && reduced.matches;
-    try { localStorage.setItem('sunshine-motion', paused ? 'paused' : 'enabled'); } catch { /* Optional preference storage. */ }
-    try {
-      if (forceMotion) localStorage.setItem('sunshine-motion-override', 'enabled');
-      else localStorage.removeItem('sunshine-motion-override');
-    } catch { /* Optional preference storage. */ }
-    setup();
-  });
-  reduced.addEventListener('change', setup);
   setup();
 })();
