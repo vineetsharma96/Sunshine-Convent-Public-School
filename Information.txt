@@ -1,0 +1,115 @@
+# INFORMATION.MD — Sunshine Convent Public School (SCPS)
+**Source URL:** http://www.scpsweb.com/
+**Purpose:** Master reference & institutional dataset for website redesign, content architecture, and UI/UX modernization.
+
+---
+
+## 1. INSTITUTIONAL IDENTITY & ACCREDITATION
+- **Full Name:** Sunshine Convent Public School
+- **Short Name / Acronym:** SCPS
+- **Tagline / Official Subtitle:** Secondary Recognised & Affiliated to C.B.S.E.
+- **Year of Establishment:** March 31, 2009
+- **Parent Body / Managing Society:** Baba Singh Ram Memorial Welfare Society (also registered in directories as Baba Singh Ram Welfare Society)
+- **Board Affiliation:** Central Board of Secondary Education (CBSE), New Delhi
+- **CBSE Affiliation Number / ID:** 2730824
+- **UDISE+ Code:** 7030326803
+- **School Level:** Secondary School (Pre-Nursery / Class I up to Class X)
+- **Medium of Instruction:** English
+- **School Type:** Co-Educational, Unaided / Independent Private Day School
+- **Academic Session Status:** Admissions Open for 2026–2027 Session
+
+---
+
+## 2. LOCATION & CONTACT INFORMATION
+- **Street Address:** Plot No. 10/21, Main Hastsal-Ranhaula Road, Near Pradhan Chowk, Vikas Nagar (Uttam Nagar / Hastsal area)
+- **City / District:** West Delhi, New Delhi
+- **State:** Delhi
+- **PIN Code:** 110059
+- **Primary Phone / WhatsApp Numbers:**
+  - +91 9599475360
+  - +91 9599475361
+- **Secondary / Legacy Office Phone:** +91 8377992006
+- **Official Email:** `sunshine.manager@gmail.com`
+- **Website:** `http://www.scpsweb.com/`
+- **Operating Hours:**
+  - **School Timings:** 8:00 AM – 2:00 PM
+  - **Administrative Office Timings:** 8:00 AM – 3:00 PM
+  - **Instructional Days per Year:** ~240 Days
+
+---
+
+## 3. LEADERSHIP & FACULTY METRICS
+- **Leadership (Per Official & CBSE Records):**
+  - **Principal:** Mr. Sandeep Yadav *(Note: Historical CBSE records also list Mrs. Satyawati as former/founding Head of Institution)*
+  - **Management:** Baba Singh Ram Memorial Welfare Society
+- **Faculty Breakdown (UDISE+ & Institutional Data):**
+  - **Total Teaching Staff:** 25 Teachers (22 Permanent, 3 Contract)
+  - **Gender Ratio (Faculty):** 22 Female Teachers, 3 Male Teachers
+  - **Qualifications:** 9 Post-Graduates, 12 Graduates, 4 Diploma/Below Graduate
+  - **Administrative & Support Staff:** ~8 Staff Members
+  - **Teaching Philosophy:** Interactive and experiential learning approach delivered by trained, qualified educators.
+
+---
+
+## 4. CAMPUS INFRASTRUCTURE & FACILITIES
+- **Total Campus Area:** 2 Acres
+- **Total Classrooms:** 39 Classrooms (plus Smart Classroom capabilities)
+- **Average Intake per Class:** ~40 Students
+- **Academic Facilities:**
+  - Dedicated Science Laboratories (Physics, Chemistry, Biology / Composite Science Lab)
+  - Computer Lab
+  - Library & Reading Room
+  - Smart Classrooms
+  - Auditorium / Multipurpose Area
+- **Sports & Physical Education:**
+  - 2-Acre Playground & Outdoor Sports Turf/Area
+  - Athletics, Badminton, Basketball, Cricket, Football, Hockey
+  - Yoga, Aerobics & Indoor Games
+  - Dedicated Kids' Play Area (Pre-Primary)
+- **Co-Curricular & Student Clubs:**
+  - **Academic Competitions:** Science Exhibitions, Olympiads, Quiz Competitions, Spell Bee, Debate, Elocution & Declamation, Creative Writing, Calligraphy.
+  - **Cultural & Arts:** Annual Day / Fest, Music, Dance, Drama & Theatre, Art & Craft, Festival Celebrations.
+  - **Community & Leadership:** Youth Parliament, Scouts & Guides, Blood Donation Camps, Parenting Seminars, Educational Tours & Summer Camps.
+
+---
+
+## 5. ACADEMIC HIGHLIGHTS & ACHIEVEMENTS
+- **Board Exam Track Record:** **100% Result in CBSE Class X Board Examinations** (Highlighted as the primary banner achievement on the homepage).
+- **Holistic Curriculum:** Follows NCERT / CBSE guidelines from foundational stage (Pre-Nursery/Primary) through Secondary level (Class X) with emphasis on practical lab work and co-curricular participation.
+
+---
+
+## 6. CURRENT WEBSITE SITEMAP & CONTENT INVENTORY (`scpsweb.com`)
+
+### 6.1 Navigation Structure
+1. **Home** (`/`)
+2. **About** (`/About` or institutional overview)
+3. **Admission** (`/frmStudent_Registeration` — Online student registration & inquiry form)
+4. **Mandatory Public Disclosure** (Required CBSE compliance documents, affiliation certificates, safety certificates, fee structure, SMC details)
+5. **Gallery** (Photos of School Gate, Campus, Science Lab, Play Area, Cultural Events)
+6. **Contact** (Address, Map, Phone/WhatsApp, Email)
+
+### 6.2 Homepage Verbatim Content (Current Site)
+- **Hero Visual:** Photograph of the Sunshine Convent Public School Main Gate.
+- **Announcement Ticker:**
+  > *"***C.B.S.E Class-X 100 % Result, Congratulation! ***Admission Open for 2026-27 session. For any query our Whatsapp no. is 9599475360/9599475361 ***"*
+- **Card 1 — Introduction:**
+  > *"Sunshine Convent Public School, establised [sic] in Year 2009 by BABA SINGH RAM MEMORIAL WELFARE SOCIETY. Learn more »"*
+- **Card 2 — About Faculties:**
+  > *"Well qualified and trained teachers with sufficient exposure for providing an interactive and experimental teaching. Learn more »"*
+- **Card 3 — Features/Facilities:**
+  > *"Sunshine Convent Public School(SCPS) is scattered across 2 acre of campus. Learn more »"*
+- **Footer:**
+  > *"Address: Plot no. 10/21, Main Hastsal-Ranhaula Road Vikas Nagar, New Delh-110059 | © 2026 - SCPS | No. of Hits"*
+
+---
+
+## 7. TECHNICAL & DESIGN AUDIT OF LEGACY SITE
+- **Current Tech Stack:** Legacy ASP.NET WebForms (`.aspx` / route-mapped `frmStudent_Registeration`) paired with uncustomized Bootstrap 3 boilerplate.
+- **Critical Issues to Fix in Redesign:**
+  1. **Copywriting & Typos:** Fix spelling errors on the live site (`"establised"` → `"established"`, `"New Delh-110059"` → `"New Delhi - 110059"`, `"2 acre of campus"` → `"a sprawling 2-acre campus"`).
+  2. **Visual Hierarchy:** Replace the raw `***` marquee text with a modern, high-contrast **Announcement Top-Bar** and an **Editorial Hero Section** celebrating the **100% CBSE Class X Result** and **2026–27 Admissions**.
+  3. **Bento / Asymmetric Layout (Anti-Slop / Taste-Skill Compliance):** Replace the generic 3-column Bootstrap `"Learn more »"` cards with an asymmetric Bento grid highlighting Key Metrics (`2 Acres`, `39 Classrooms`, `100% CBSE Result`, `Est. 2009`, `CBSE Affil. #2730824`).
+  4. **Frictionless Admissions & WhatsApp CTA:** Convert the buried `/frmStudent_Registeration` page and plain-text WhatsApp numbers into an interactive **Admission Inquiry Drawer/Modal** + one-click **WhatsApp Chat (`wa.me/919599475360`)** button.
+  5. **CBSE Mandatory Public Disclosure:** Present the Mandatory Public Disclosure documents in a clean, searchable, tabular compliance view (required by CBSE norms) rather than broken or hidden links.
+  6. **Remove Dated Artifacts:** Eliminate the 2000s-era `"No. of Hits"` counter in the footer and replace it with verified institutional trust badges (`CBSE Affiliation #2730824`, `UDISE+ Verified: 7030326803`).

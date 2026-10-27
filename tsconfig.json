@@ -1,0 +1,1 @@
+{"compilerOptions":{"jsx":"react-jsx","baseUrl":".","paths":{"@/*":["./*"]},"target":"ES2020","module":"ESNext","moduleResolution":"bundler","allowSyntheticDefaultImports":true}}

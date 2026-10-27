@@ -1,0 +1,46 @@
+/* Shared final typography layer: body copy >=14px, labels >=12px. */
+:root{--muted:#5d6758}
+.brand small,.header .brand small,.footer .brand small{font-size:10px;letter-spacing:1px;line-height:1.5}
+.brand,.header .brand{font-size:16px}
+.brand-logo{width:68px;height:42px}.footer .brand-logo{width:60px;height:38px}
+.hero .eyebrow,.eyebrow,.card-number,.card-bottom,.role-label{font-size:12px;letter-spacing:1.1px}
+.header nav>a,.button,.button.small,.text-link,.filter-bar button{font-size:14px}
+.intro,.learning-card p,.about-copy .muted,.campus-details p,.admissions p,.admission-steps small,.faq details p,.contact>div>p:not(.eyebrow),.page-intro,.story-grid p:not(.eyebrow),.fact-grid p,.process-list p,.enquiry-card>p:not(.eyebrow),.pending-note p,.gallery-notice p,.gallery-item p,.document-note p{font-size:14px;line-height:1.8}
+.hero-foot p,.hero-foot small,.result-note p,.result-note small,.photo-label,.source-note,.footer-bottom,.resource-note,.form-note,.document-count,.breadcrumb,.office-details span,.dialog-note{font-size:12px;line-height:1.65}
+.hero-foot small{min-height:22px}.flip-message{min-width:0}
+.admission-steps small{margin-top:8px}.result-note{max-width:280px}
+.result-note small{display:block;max-width:170px;margin-top:5px}
+.photo-label{letter-spacing:.7px;max-width:calc(100% - 40px)}.hero-photo .photo-label{margin-inline:auto}
+.photo-label,.visual-caption,.result-note small,.hero-foot small,.source-note{color:var(--muted)}
+.stats>div>span{font-size:12px}.source-note{max-width:1000px;margin-top:20px}
+.source-note a,.document-note a{text-decoration:underline;text-underline-offset:3px}
+.enquiry-card label,.document-tools label,dialog label{font-size:14px}
+.enquiry-card input,.enquiry-card select,.enquiry-card textarea,.document-tools input,.document-tools select,dialog select{font-size:16px}
+.document-table tbody th,.document-table td{font-size:14px}.document-table td:nth-child(2),.document-table td a,.document-table thead th{font-size:12px}
+.document-table td:last-child{white-space:nowrap;width:90px}
+.verified-panel{background:#edeee4;padding:28px;border-radius:8px;margin-bottom:25px}.verified-panel p{font-size:14px}.verified-panel .text-link{margin-top:12px}
+@media(max-width:1100px){
+  .header{position:relative;flex-wrap:wrap;gap:0;padding-block:15px}
+  .menu-toggle{display:flex;flex-direction:column;gap:6px;justify-content:center;align-items:center;background:none;border:1px solid var(--line);border-radius:50%;width:44px;height:44px}
+  .menu-toggle span{width:17px;height:1px;background:var(--green);transition:transform .3s var(--ease)}
+  .menu-toggle[aria-expanded=true] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+  .menu-toggle[aria-expanded=true] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+  .header nav{display:none;flex-basis:100%;padding:15px 0 10px;flex-direction:column;align-items:stretch;gap:0}
+  .header nav.open{display:flex;background:var(--paper)}
+  .header nav>a{font-size:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .header nav .button{display:flex;align-self:flex-start;margin-top:16px}
+}
+@media(max-width:620px){
+  .brand,.header .brand{font-size:14px}.brand-logo{width:54px;height:36px}.brand,.header .brand{gap:8px}
+  .header .brand small{font-size:10px;letter-spacing:.3px}
+  .hero-actions{flex-wrap:wrap;gap:18px}.hero-actions .button,.hero-actions .text-link{font-size:14px}
+  .hero .eyebrow{font-size:12px;letter-spacing:.5px}
+  .result-note{left:0;padding:17px;gap:10px;max-width:240px}
+  .result-note strong{font-size:32px}.result-note p,.result-note small{font-size:12px}
+  .learning-card p,.campus-details p,.page-cta p:not(.eyebrow),.faq summary,.faq details p{font-size:14px}
+  .identity-grid dt,.gallery-item figcaption>span{font-size:12px;letter-spacing:.6px}
+  .document-table thead th{font-size:12px;letter-spacing:.5px}
+  .document-table tbody th,.document-table td{font-size:14px;padding:16px 10px}
+  .document-table td:nth-child(2),.document-table td a{font-size:12px}
+}
+@media(max-width:360px){.header .brand small{font-size:10px;letter-spacing:0}.header .brand{font-size:13px}.brand-logo{width:44px;height:32px}.menu-toggle{width:42px;height:42px}.header .brand{gap:6px}}
