@@ -27,6 +27,8 @@ Open [localhost:4173](http://localhost:4173/). Stop the server with `Ctrl+C`. No
 
 - Responsive navigation, keyboard focus styles, and a skip link.
 - Blue welcome lines, heading reveals, horizontal learning-text reveal, counters, and moving learning-card symbols.
+- Full-screen opening Apple Hello handwriting intro in school green and orange, on the shared `#fffff0` cream background. Source credit and license are recorded in [MOTION.md](MOTION.md).
+- The four-second welcome intro writes English “hello”, then Hindi “नमस्ते”, before revealing the homepage. Tap, click, or press Escape to skip it.
 - Decorative motion in blank photo frames; no stock or generated student photographs.
 - Animations start automatically on every page, without a motion toggle or saved pause preference.
 - Admission enquiries prepare a WhatsApp draft for the visitor to send. There is no backend submission or stored personal information.

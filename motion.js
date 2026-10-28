@@ -254,5 +254,67 @@
     });
     document.fonts.ready.then(() => ScrollTrigger.refresh());
   }
-  setup();
+  // Apple Hello Effect by Chánh Đại (MIT); lettering: JaceThings/SF-Hello.
+  const intro = document.querySelector('.hello-intro');
+  if (intro) {
+    const hello = intro.querySelector('.hello-handwriting');
+    const content = [...document.body.children].filter(element => element !== intro && element.tagName !== 'SCRIPT');
+    const previousInert = content.map(element => element.inert);
+    content.forEach(element => { element.inert = true; });
+    root.classList.add('motion-enabled', 'hello-intro-active');
+    intro.hidden = false;
+    let finished = false;
+    let writing;
+    function finishIntro() {
+      if (finished) return;
+      finished = true;
+      writing?.kill();
+      intro.removeEventListener('pointerdown', skipIntro);
+      document.removeEventListener('keydown', skipWithKeyboard);
+      intro.remove();
+      root.classList.remove('hello-intro-active');
+      content.forEach((element, index) => { element.inert = previousInert[index]; });
+      setup();
+    }
+    function skipIntro(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      finishIntro();
+    }
+    function skipWithKeyboard(event) {
+      if (event.key === 'Escape') skipIntro(event);
+    }
+    intro.addEventListener('pointerdown', skipIntro);
+    document.addEventListener('keydown', skipWithKeyboard);
+    writing = gsap.timeline({ onComplete: finishIntro });
+    hello.querySelectorAll('path').forEach((path, index) => {
+      const length = path.getTotalLength();
+      writing.fromTo(path, { strokeDasharray: length, strokeDashoffset: length, opacity: 0 }, {
+        strokeDashoffset: 0, opacity: 1, duration: index ? 2.8 : .8, ease: 'power1.inOut',
+      }, index ? .7 : 0);
+    });
+    writing.fromTo(hello, { color: '#173f36' }, { color: '#d65a30', duration: 3.5, ease: 'sine.inOut' }, 0);
+    const hindi = intro.querySelector('.hello-hindi');
+    if (hindi) {
+      writing.to(hello, { opacity: 0, duration: .25 }, 3.8)
+        .set(hello, { display: 'none' }, 4.05)
+        .call(() => { hindi.removeAttribute('hidden'); }, [], 4.05);
+      const durations = [.6, .4, .6, .4, .6, .4, .4, .6, .6, .8];
+      let delay = 4.05;
+      hindi.querySelectorAll('path').forEach((path, index) => {
+        const length = path.getTotalLength();
+        const duration = durations[index] * .8;
+        writing.fromTo(path, { strokeDasharray: length, strokeDashoffset: length, opacity: 0 }, {
+          strokeDashoffset: 0, opacity: 1, duration, ease: 'power1.out',
+        }, delay);
+        delay += duration;
+      });
+      writing.fromTo(hindi, { color: '#d65a30' }, { color: '#173f36', duration: 4.32, ease: 'sine.inOut' }, 4.05);
+    }
+    writing.to(intro, { opacity: 0, duration: .5, ease: 'power2.inOut' }, '+=.4');
+    // Fit both languages, their brief holds, and the exit into four seconds.
+    writing.timeScale(writing.duration() / 4);
+  } else {
+    setup();
+  }
 })();

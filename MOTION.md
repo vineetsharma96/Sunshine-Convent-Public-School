@@ -5,6 +5,7 @@
 The HTML pages use local GSAP 3.15.0 and ScrollTrigger with `motion.js`, `motion.css`, and `app.js`.
 
 - Blue welcome lines and word-level heading reveals.
+- A full-screen homepage opening intro draws Apple Hello handwriting from green to orange, holds the completed lettering briefly, then fades away before the page animations begin. It is removed from the page after completion and does not appear on inner pages. Without JavaScript, the intro stays hidden and the site is immediately usable. Adapted to GSAP from [Chánh Đại's Apple Hello Effect](https://chanhdai.com/components/apple-hello-effect), with SVG lettering credited upstream to JaceThings/SF-Hello. Registry source: `components/registry/apple-hello-effect.json`; MIT notice: `vendor/APPLE-HELLO-LICENSE`.
 - Scroll-linked horizontal reveal for the homepage learning heading and supporting copy.
 - Orbits and entrance shutters in blank photo frames.
 - Numeric school counters; the founding year stays static.
@@ -15,6 +16,8 @@ The HTML pages use local GSAP 3.15.0 and ScrollTrigger with `motion.js`, `motion
 Observed ambient effects pause outside the viewport. Pointer movement is limited to fine pointing devices. Motion starts automatically on every page, including when the browser prefers reduced motion. There is no motion toggle, and legacy saved pause preferences are ignored.
 
 GSAP distribution files retain their upstream banners. See [GSAP terms](https://gsap.com/standard-license), `vendor/GSAP-README.md`, and `vendor/COMPONENT-NOTICES.txt`.
+
+The opening intro plays English “hello” followed by Hindi “नमस्ते”. The full sequence, including the fade-out, lasts four seconds. Tapping or clicking anywhere, or pressing Escape, skips it immediately. Hindi SVG source: `components/registry/apple-hello-effect-hindi.json`, under the same Chánh Đại MIT notice.
 
 ## Retained optional React components
 
